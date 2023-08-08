@@ -1,0 +1,2 @@
+Frontend Server: "npm start"
+Backend Server Start: "nodemon ./index.js"
