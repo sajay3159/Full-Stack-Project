@@ -66,7 +66,7 @@ const MuiForms: React.FC = () => {
 
   useEffect(() => {
     if (params.id) {
-      axios.get(`http://localhost:5000/list/${params.id}`).then((response) => {
+      axios.get(`https://student-list-crud-operation-backend.onrender.com/${params.id}`).then((response) => {
         console.log(response.data);
 
         // Set the form values with the fetched data
@@ -95,7 +95,7 @@ const MuiForms: React.FC = () => {
 
   const createFormDataToAPI = async (data: FormData) => {
     try {
-      const response = await fetch(`http://localhost:5000/create`, {
+      const response = await fetch(`https://student-list-crud-operation-backend.onrender.com/create`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -115,7 +115,7 @@ const MuiForms: React.FC = () => {
 
   const submitFormDataToAPI = async (data: FormData) => {
     try {
-      const response = await fetch(`http://localhost:5000/update/${params.id}`, {
+      const response = await fetch(`https://student-list-crud-operation-backend.onrender.com/update/${params.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -124,7 +124,7 @@ const MuiForms: React.FC = () => {
       });
 
       if (response.ok) {
-        console.log('Form data updated submitted successfully!', response.body);
+        console.war('Form data updated submitted successfully!', response.body);
       } else {
         console.error('Failed to submit form data:', response.status, response.statusText);
       }
