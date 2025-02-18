@@ -85,7 +85,7 @@ export default function StudentList() {
 
   const handleDelete = async (id: any) => {
     try {
-      const response = await axios.delete(`http://localhost:5000/delete/${id}`);
+      const response = await axios.delete(`https://student-list-crud-operation-backend.onrender.com/delete/${id}`);
       if (response.status === 200) {
         setRows(rows.filter((row) => row._id !== id));
         // console.log("All the data in an arrey",rows)
